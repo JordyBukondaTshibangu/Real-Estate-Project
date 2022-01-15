@@ -5,12 +5,12 @@ import { FaBars } from 'react-icons/fa';
 import { menuData } from '../data/MenuData'
 import { Button } from './Button';
 
-const NavBar = () => {
+const NavBar = ({  toggle }) => {
 
     return (
         <Navigation>
            <Logo to="/">TshibssFy</Logo>
-           <MobileMenu/>
+           <MobileMenu onClick={ toggle }/>
            <NavigationMenu>
                { 
                 menuData.map((item,index) => <NavigationMenuLink key={index} to={item.link}>
