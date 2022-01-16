@@ -8,6 +8,8 @@ import { SliderDataOne } from './data/sliderData';
 import Dropdown from './components/Dropdown';
 import InfoSection from './components/InfoSection';
 import { InfoDataOne, InfoDataTwo, InfoDataThree } from './data/InfoData';
+import LatestSection from './components/LatestSection';
+import { LatestHomedata } from './data/latestHomeData';
 
 
 const App = () => {
@@ -17,8 +19,6 @@ const App = () => {
 
   const handleToggle = () => {
     setIsOpen(!isOpen)
-
-    console.log(isOpen)
   }
   return (
       <>
@@ -27,8 +27,9 @@ const App = () => {
         <Dropdown isOpen={isOpen} toggle={handleToggle}/>
         <Hero slides={SliderDataOne} />
         <InfoSection {...InfoDataOne}/>
-        <InfoSection {...InfoDataTwo}/>
-        <InfoSection {...InfoDataThree}/>
+        {/* <InfoSection {...InfoDataTwo}/>
+        <InfoSection {...InfoDataThree}/> */}
+        <LatestSection latestHome={LatestHomedata}/>
       </>
 
   );
